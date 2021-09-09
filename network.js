@@ -1,26 +1,23 @@
 export default {
-  id: 'cosmos-hub-mainnet',
-  name: 'Cosmos Mainnet',
-  description:
-    'Cosmos is a network of independent parallel blockchains, powered by BFT consensus algorithms like Tendermint.',
+  id: 'ubiknetwork-1', // DEPRECATE, only used for Lunie extension, NOT CHAIN ID
+  name: 'Ubiknetwork testnet',
+  description: 'Ubiknetwork description.',
   logo: `logo.svg`,
-  website: 'https://cosmos.network',
-  // apiURL: 'http://localhost:8010/proxy',
-  apiURL: 'https://api.cosmos.network',
-  rpcURL: 'https://rpc.cosmos.network',
-  minBlockHeight: 5200792, // actually 5200791, but it has the wrong block time.
-  stakingDenom: 'ATOM',
+  website: 'https://ubik.capital',
+  apiURL: 'http://178.18.242.125:8010/proxy', // apiURL: 'http://localhost:8010/proxy', // use `npx lcp --proxyUrl http://34.123.30.100:1317`
+  rpcURL: 'ws://178.18.242.125:26657',
+  stakingDenom: 'UBIK',
   coinLookup: [
     {
-      viewDenom: 'ATOM',
-      chainDenom: 'uatom',
+      viewDenom: 'UBIK',
+      chainDenom: 'uubik',
       chainToViewConversionFactor: 1e-6,
-      icon: `currencies/atom.png`,
+      icon: `currencies/muon.png`,
     },
   ],
-  addressPrefix: 'cosmos',
-  validatorAddressPrefix: 'cosmosvaloper',
-  validatorConsensusaddressPrefix: 'cosmosvalcons', // needed to map validators from staking queries to the validator set
+  addressPrefix: 'ubik',
+  validatorAddressPrefix: 'ubikvaloper',
+  validatorConsensusaddressPrefix: 'ubikvalcons', // needed to map validators from staking queries to the validator set
   HDPath: `m/44'/118'/0'/0/0`,
   lockUpPeriod: `3 days`,
   fees: {
@@ -28,12 +25,15 @@ export default {
       gasEstimate: 350000,
       feeOptions: [
         {
-          denom: 'ATOM',
+          denom: 'UBIK',
           amount: 0.001,
         },
       ],
     },
   },
   icon: `https://lunie.fra1.digitaloceanspaces.com/network-icons/cosmos.png`,
-  localSigning: true, // this is only to be used as a developer tool - never deployed in production or for mainnet chains
+
+  // This is only to be used as a developer tool and for testing purposes
+  // NEVER ENABLE LOCALSIGNING IN PRODUCTION OR FOR MAINNETS
+  localSigning: false,
 }

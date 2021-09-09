@@ -4,6 +4,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "dev": "nuxt",
+    "dev:host": "nuxt --hostname '0' --port 8000",
     "analyze": "nuxt build -a",
     "build": "nuxt build",
     "start": "nuxt start",
