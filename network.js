@@ -22,7 +22,7 @@ export default {
   lockUpPeriod: `3 days`,
   fees: {
     default: {
-      gasEstimate: 350000,
+      gasEstimate: 500000,
       feeOptions: [
         {
           denom: 'UBIK',
