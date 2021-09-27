@@ -4,8 +4,8 @@ export default {
   description: 'Ubiknetwork description.',
   logo: `logo.svg`,
   website: 'https://ubik.capital',
-  apiURL: 'http://178.18.242.125:8010/proxy', // apiURL: 'http://localhost:8010/proxy', // use `npx lcp --proxyUrl http://34.123.30.100:1317`
-  rpcURL: 'ws://178.18.242.125:26657',
+  apiURL: 'http://PUBLIC_IP:8010/proxy', // use `npx lcp --proxyUrl http://PUBLIC_IP:1317`
+  rpcURL: 'ws://PUBLIC_IP:26657',
   stakingDenom: 'UBIK',
   coinLookup: [
     {
